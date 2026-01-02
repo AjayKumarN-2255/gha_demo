@@ -16,7 +16,13 @@ jobs:
   access_vars:
    runs-on: ubuntu-latest
    steps:
-     - name: Build stage
+     - name: Access variable
        run: echo "My name is ${{vars.MY_NAME}}"
+
+  access_secret:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Access secret
+       run: echo "My name is ${{secrets.TEST_SECRET}}"
 
        
