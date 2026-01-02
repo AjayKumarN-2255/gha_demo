@@ -1,2 +1,8 @@
 name: Continues Integration
 on: workflow_dispatch
+jobs: 
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Printing Hello_world
+       run: echo "Hello world"
