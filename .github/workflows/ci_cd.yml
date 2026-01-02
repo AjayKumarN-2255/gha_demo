@@ -1,26 +1,10 @@
 name: Continues Integration
-on: workflow_dispatch
+on: push
 jobs: 
   build:
    runs-on: ubuntu-latest
    steps:
      - name: Build stage
        run: echo " App is building"
-       
-  test:
-   needs: build
-   runs-on: ubuntu-latest
-   steps:
-     - name: Test stage
-       run: |
-         echo "Testing started"
-         echo "Testing completed"
-         
-  deploy:
-   needs: test
-   runs-on: ubuntu-latest
-   steps:
-     - name: Deploy stage
-       run: echo " App is deployed"
-       
+
        
