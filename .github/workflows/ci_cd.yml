@@ -1,0 +1,2 @@
+name: Continues Integration
+on: workflow_dispatch
