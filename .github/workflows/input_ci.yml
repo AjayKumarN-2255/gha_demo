@@ -4,6 +4,7 @@ on:
     inputs:
       first_input:
        description: first input to select
+       type: choice  
        required: true
        default: dev
        options:
