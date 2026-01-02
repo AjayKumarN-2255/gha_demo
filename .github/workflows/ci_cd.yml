@@ -7,22 +7,13 @@ on:
     branches:
       - main
 jobs: 
-  build:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Build stage
-       run: echo " App is building"
+  action-demo: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code 
+        uses: actions/checkout@v4
 
-  access_vars:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Access variable
-       run: echo "My name is ${{vars.MY_NAME}}"
-
-  access_secret:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Access secret
-       run: echo "My name is ${{secrets.TEST_SECRET}}"
+      - name: Print index.html file
+        run: cat index.html
 
        
