@@ -6,6 +6,10 @@ on:
        description: first input to select
        required: true
        default: dev
+       options:
+        - dev
+        - stage
+        - prod
 
 jobs:
   inputs-demo:
