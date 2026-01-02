@@ -1,0 +1,16 @@
+name: Inputs Demo
+on:
+  workflow_dispatch:
+    inputs:
+      first_input:
+       description: first input to select
+       required: true
+       default: dev
+
+jobs:
+  inputs-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the app
+        run: echo "Deploying the application to ${{inputs.first_input}}"
+       
