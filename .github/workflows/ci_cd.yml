@@ -13,4 +13,10 @@ jobs:
      - name: Build stage
        run: echo " App is building"
 
+  access_vars:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Build stage
+       run: echo "My name is ${{vars.MY_NAME}}"
+
        
